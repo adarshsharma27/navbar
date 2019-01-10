@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flexbox</title>
+    <style>
+
+    
+     header nav{
+         background-color:aqua;
+         color:black;
+         width:800px;
+         height:60px;
+         margin-left:12px;
+         
+
+         
+        
+     }
+     header nav ul{
+        display:flex;
+        justify-content:space-evenly;
+        line-height:60px;
+     }
+     ul li{
+         list-style:none;
+    
+     }
+     header nav ul li ul{
+        display:flex;
+        flex-direction:column;
+        
+    
+    }
+    header nav ul li ul li{
+        margin-left: -32px;
+        background-color:aqua;
+        width: 79px;
+        display:none;
+    
+    }
+    header nav ul li ul li a{
+         padding: 6px;
+    }
+    header nav ul li a:hover ul{
+
+        display:block;
+
+    }
+
+     ul li a{
+         text-decoration:none;
+     }
+     ul li a:hover{
+        display: block;
+         background-color: aquamarine;
+     }
+     img {
+        border-radius: 20px;
+        background-position: 100% 100%;
+     }
+     figure{
+        margin-left: 4px;
+    }
+     
+    @media(min-width:768px){
+
+        img{
+            /*display:none;*/
+        }
+    }
+    @media(max-width:760px)
+    {
+        header nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        line-height: 45px;
+        flex-direction: column;
+        align-items: center;
+        margin-left: -37px;
+        }
+    header nav {
+        background-color: aqua;
+        color: black;
+        width: 320px;
+        height: 214px;
+        margin-left: -8px;
+    }
+    
+    
+    }
+
+    @media(min-width:375px)  and (max-width:760px){
+        header nav{ 
+         width: 425px;
+    }
+    }
+    .photo{
+        display: flex;
+        flex-direction: row;
+    }
+    h1,p{
+        columns:2;
+    }
+    </style>
+    <script>
+    function dis(){
+        document.getElementById("hidden")
+
+    }
+    
+    
+    </script>
+</head>
+<body>
+    <header class="nav-bar id="hidden"">
+       <nav>
+          <ul>
+              <li><a href="">HOME</a></li>
+              <li><a href="">CONTACT US</a></li>
+              <li><a href="">FEEDBACK</a>
+                  <ul>
+                      <li><a href="">PARENTS</a></li>
+                      <li><a href="">TEACHER</a></li>
+                      <li><a href="">FRIENDS</a></li>
+                      <li><a href="">OTHER</a></li>
+                  </ul>
+              </li>
+              <li><a href="">LOGIN</a></li>
+              <li><a href="">LOGOUT</a></li>
+          </ul>
+        </nav>
+<!--<img src="C:\Users\user\Desktop\webtemplte\business\images\toggle-image.png" onclick="dis()" alt="error"> -->
+    </header>
+    <br>
+   <div class="photo">
+        <figure>
+      <img src="C:\Users\user\Desktop\adarsh.jpg" alt="myphoto" width=300px height=300px>
+    </figure>
+   <!--<h1>FRONTEND DEVELOPER</h1> -->
+  
+    </div>
+</body>
+</html>
